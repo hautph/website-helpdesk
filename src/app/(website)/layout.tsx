@@ -61,10 +61,10 @@ export default function RootLayout({ children }) {
 
 export const metadata: Metadata = {
   title: {
-    template: '%s – Umami',
-    default: 'Umami',
+    template: '%s – Digizus Helpdesk',
+    default: 'Digizus Helpdesk',
   },
   openGraph: {
-    description: 'Umami is a simple, fast, privacy-friendly alternative to Google Analytics.',
+    description: 'Digizus Helpdesk: Bilingual, privacy-first Service Desk for Canada. Modern, fast, and compliant support platform.',
   },
 };

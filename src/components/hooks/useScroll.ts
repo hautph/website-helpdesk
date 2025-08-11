@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 export function useScroll(name = 'scroll') {
   useEffect(() => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
     function handler() {
       document.documentElement.dataset[name] = window.scrollY.toString();
     }

@@ -15,53 +15,46 @@ import {
 
 const featuresChart = [
   {
-    label: 'Data',
+    label: 'Ticket Management / Gestion des tickets',
     items: [
-      ['Events (included)', '100K', '1 million', 'Custom'],
-      ['Additional events', false, '$0.00002 per event', 'Custom'],
-      ['Data export', true, true, true],
-      ['Data import', false, true, true],
+      ['Multi-channel (Email, Chat, Web)', true, true, true],
+      ['Automated assignment / Assignation automatique', false, true, true],
+      ['Custom fields / Champs personnalisés', false, true, true],
+      ['Bulk actions / Actions groupées', false, true, true],
     ],
   },
   {
-    label: 'Analytics',
+    label: 'Collaboration & Automation / Collaboration & Automatisation',
     items: [
-      ['Websites', 'Up to 3', 'Unlimited', 'Unlimited'],
-      ['Teams', false, true, true],
-      ['Team members', false, 'Unlimited', 'Unlimited'],
-      ['Custom events', true, true, true],
-      ['Event properties', true, true, true],
-      ['Session properties', true, true, true],
-      ['API access', 'Limited', true, true],
+      ['Internal notes / Notes internes', true, true, true],
+      ['Team roles & permissions / Rôles & permissions', false, true, true],
+      ['Macros & canned replies / Réponses pré-enregistrées', false, true, true],
+      ['SLA tracking / Suivi SLA', false, false, true],
     ],
   },
   {
-    label: 'Reports',
+    label: 'Customer Experience / Expérience client',
     items: [
-      ['Insights', true, true, true],
-      ['Funnel Analysis', true, true, true],
-      ['User Retention', true, true, true],
-      ['UTM parameters', true, true, true],
-      ['Goals', true, true, true],
-      ['User Journey', true, true, true],
-      ['Revenue', true, true, true],
-      ['Attribution', true, true, true],
+      ['Satisfaction surveys / Enquêtes de satisfaction', false, true, true],
+      ['Customer portal / Portail client', false, true, true],
+      ['Multilingual support / Support multilingue', false, true, true],
+      ['Knowledge base / Base de connaissances', false, true, true],
     ],
   },
   {
-    label: 'Monitoring',
+    label: 'Reporting & Analytics / Rapports & Analyses',
     items: [
-      ['Realtime events', true, true, true],
-      ['Custom dashboards', true, true, true],
-      ['Email reports', false, true, true],
+      ['Dashboard & reports / Tableaux de bord', true, true, true],
+      ['Export data / Export de données', false, true, true],
+      ['Custom reports / Rapports personnalisés', false, false, true],
     ],
   },
   {
-    label: 'Privacy',
+    label: 'Security & Privacy / Sécurité & Confidentialité',
     items: [
       ['GDPR compliant', true, true, true],
-      ['CCPR compliant', true, true, true],
-      ['No cookie banners required', true, true, true],
+      ['Data encryption / Chiffrement des données', false, true, true],
+      ['Access logs / Journaux d’accès', false, false, true],
     ],
   },
   {
@@ -111,11 +104,15 @@ export default function Features() {
                   </TableCell>
                 </TableRow>
                 {items.map((item, index) => {
+                  // Use a unique key combining label and index
+                  const rowKey = `${label.replace(/\s+/g, '-')}-${index}`;
                   return (
-                    <TableRow key={index}>
+                    <TableRow key={rowKey}>
                       {item.map((data, i) => {
+                        // Use a unique key for each cell
+                        const cellKey = `${rowKey}-cell-${i}`;
                         return (
-                          <TableCell key={i} align={i > 0 ? 'center' : 'start'}>
+                          <TableCell key={cellKey} align={i > 0 ? 'center' : 'start'}>
                             {data === true ? (
                               <Icon>
                                 <Icons.Check />

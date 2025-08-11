@@ -10,7 +10,10 @@ export default function PricingPage() {
   return (
     <article>
       <Column gap="8">
-        <PageHeader title="Pricing" description="Simple usage based pricing" />
+        <PageHeader
+          title="Pricing / Tarification"
+          description="Flexible plans for every team. / Des forfaits flexibles pour chaque équipe."
+        />
         <Plans />
         <Features />
         <Questions />

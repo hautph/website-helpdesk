@@ -2,51 +2,60 @@
 import { Button, Icon, Text, Box, Column, Row, Heading, Grid, Icons } from '@umami/react-zen';
 import Link from 'next/link';
 import { CLOUD_URL } from '@/lib/constants';
-import useQueryString from '@/components/hooks/useQueryString';
+import { useMemo } from 'react';
 import styles from './Plans.module.css';
 
 export default function Plans() {
-  const query = useQueryString({ ref: 'umami-pricing' });
+  // Build query string manually to ensure it's always a string
+  const query = useMemo(() => '?ref=digizus-pricing', []);
 
   const plans = [
     {
-      name: 'Hobby',
+      name: 'Starter / Débutant',
       price: '$0',
-      interval: '/ month',
-      description: 'Get started:',
+      interval: '/ month / mois',
+      description: 'Perfect for small teams getting started. / Parfait pour les petites équipes qui débutent.',
       features: [
-        '100K events per month',
-        'Up to 3 websites',
-        '6 month data retention',
-        'Community support',
+        'Up to 3 agents / Jusqu’à 3 agents',
+        '100 tickets per month / 100 tickets par mois',
+        'Basic ticketing & email support / Gestion de tickets et support email de base',
+        'Community support / Support communautaire',
       ],
-      url: `${CLOUD_URL}/signup${query}&plan=hobby`,
-      button: 'Get started',
+      url: `${CLOUD_URL.en}/signup${query}&plan=starter`,
+      button: 'Get started / Commencer',
     },
     {
-      name: 'Pro',
-      price: '$20',
-      interval: '/ month',
-      description: 'Everything in Hobby, plus:',
+      name: 'Professional / Professionnel',
+      price: '$29',
+      interval: '/ month / mois',
+      description: 'Advanced features for growing teams. / Fonctionnalités avancées pour les équipes en croissance.',
       features: [
-        '1 million events per month',
-        '$0.00002 per additional event',
-        'Unlimited websites',
-        'Unlimited team members',
-        '5 year data retention',
-        'Email support',
+        'Unlimited agents / Agents illimités',
+        'Unlimited tickets / Tickets illimités',
+        'Multi-channel support (email, chat, web) / Support multicanal (email, chat, web)',
+        'Automation & workflows / Automatisation et flux de travail',
+        'Knowledge base / Base de connaissances',
+        'SLA tracking / Suivi des SLA',
+        'Email support / Support par email',
       ],
-      url: `${CLOUD_URL}/signup${query}&plan=pro`,
-      button: 'Try 14-day free trial',
+      url: `${CLOUD_URL.en}/signup${query}&plan=pro`,
+      button: 'Try 14-day free trial / Essayer 14 jours gratuits',
       variant: 'primary',
     },
     {
       name: 'Enterprise',
-      price: 'Contact us',
-      description: 'Everything in Pro, plus:',
-      features: ['Custom pricing', 'Custom data retention', 'Uptime SLA', 'Enterprise support'],
-      url: 'mailto:sales@umami.is?subject=Umami Cloud enterprise pricing',
-      button: 'Contact us',
+      price: 'Contact us / Contactez-nous',
+      description: 'Custom solutions for large organizations. / Solutions personnalisées pour grandes entreprises.',
+      features: [
+        'All Professional features / Toutes les fonctionnalités Professionnel',
+        'Custom integrations / Intégrations personnalisées',
+        'Dedicated support / Support dédié',
+        'Uptime SLA / SLA de disponibilité',
+        'Onboarding assistance / Assistance à l’intégration',
+        'Custom security & compliance / Sécurité et conformité personnalisées',
+      ],
+      url: 'mailto:sales@digizus.com?subject=Digizus Helpdesk enterprise pricing',
+      button: 'Contact us / Contactez-nous',
     },
   ];
 

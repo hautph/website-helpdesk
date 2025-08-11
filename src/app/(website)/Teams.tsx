@@ -6,31 +6,37 @@ export default function Teams() {
   return (
     <section>
       <TextBlock size="md" align="center">
-        <h1>Umami works for companies and teams of all sizes</h1>
+        <h1>Digizus Helpdesk: Support for Every Team, Everywhere</h1>
+        <h1 style={{ fontWeight: 'normal', fontSize: '1.2em', marginTop: 8 }}>
+          Digizus Helpdesk : Assistance pour toutes les équipes, partout
+        </h1>
       </TextBlock>
       <div className={styles.row}>
         <TextBlock size="md">
-          <h2>Startup to Enterprise</h2>
+          <h2>From Startups to Enterprises</h2>
           <p>
-            From small startups to large enterprises, thousands of companies use Umami every day
-            because it can be adapted to any website analytics use case.
+            Every day, organizations of all sizes trust Digizus Helpdesk to deliver fast, reliable, and friendly support to their customers and teams. Our platform adapts to any support workflow, from IT service management to customer care.<br />
+            <span style={{ fontStyle: 'italic', color: '#888' }}>
+              Des startups aux grandes entreprises, Digizus Helpdesk accompagne chaque jour des organisations de toutes tailles pour offrir un support rapide, fiable et convivial à leurs clients et équipes.
+            </span>
           </p>
         </TextBlock>
         <TextBlock size="md">
-          <h2>Run Umami Alongside Your Existing Website Analytics</h2>
+          <h2>Seamless Integration</h2>
           <p>
-            Umami works perfectly alongside any existing website analytics platform. Use Umami as a
-            second source of website analytics data to double-check key website data from your
-            current website analytics solution to increase confidence in your numbers.
+            Digizus integrates perfectly with your existing tools and channels. Use Digizus as your central hub for managing support tickets, live chat, email, and more—ensuring no request is ever missed.<br />
+            <span style={{ fontStyle: 'italic', color: '#888' }}>
+              Digizus s'intègre parfaitement à vos outils et canaux existants. Centralisez la gestion des tickets, du chat, des emails, etc.—aucune demande ne sera oubliée.
+            </span>
           </p>
         </TextBlock>
         <TextBlock size="md">
-          <h2>Team Friendly</h2>
+          <h2>Collaboration Made Easy</h2>
           <p>
-            From marketing to sales to development and every team in between, invite your teammates
-            and executives to Umami using customizable access controls. Grant admin access to your
-            Umami dashboard or generate a shareable link for execs who need view-only access to
-            specific dashboards.
+            Invite your entire team—from support agents to managers—to collaborate on tickets, share knowledge, and deliver outstanding service. Customizable roles and permissions keep your data secure and your workflows efficient.<br />
+            <span style={{ fontStyle: 'italic', color: '#888' }}>
+              Invitez toute votre équipe—agents, managers, etc.—à collaborer sur les tickets, partager des connaissances et offrir un service exceptionnel. Les rôles et permissions personnalisables garantissent la sécurité des données et l'efficacité des processus.
+            </span>
           </p>
         </TextBlock>
       </div>

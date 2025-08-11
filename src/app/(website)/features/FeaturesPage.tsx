@@ -3,269 +3,206 @@ import { Box, Column, Grid, Heading, Icon, Text, Row } from '@umami/react-zen';
 import GetStartedBanner from '@/components/GetStartedBanner';
 import PageHeader from '@/components/PageHeader';
 import {
-  Anonymous,
   Bolt,
-  Bounce,
-  Compare,
-  Cookie,
   Data,
   Device,
   Export,
   Filter,
-  Funnel,
   Gauge,
   Gear,
   Graph,
-  Import,
   Key,
   Language,
   Lightbulb,
-  Location,
-  Magnet,
-  Money,
   Network,
-  Path,
   Privacy,
-  Realtime,
-  Reports,
   Share,
   Tag,
-  Target,
   Team,
-  Traffic,
   User,
-  View,
 } from 'src/components/svg';
 
 const items = [
   {
-    title: 'Analytics',
-    description: `Umami collects all the metrics you care about to help you make better decisions.`,
+    title: 'Ticket Management / Gestion des tickets',
+    description: `Efficiently manage, assign, and resolve support requests with a modern, intuitive helpdesk platform. / Gérez, attribuez et résolvez efficacement les demandes d'assistance avec une plateforme de helpdesk moderne et intuitive.`,
     items: [
       {
-        title: 'Page views',
+        title: 'Multi-channel Support / Support multicanal',
         description: [
-          'Knowing which of your pages gets the most traffic is essential to improving your website content.',
-        ],
-        icon: <View />,
-      },
-      {
-        title: 'Visitors',
-        description: [
-          'Get detailed information about your visitors like their device, browser, OS and location.',
-        ],
-        icon: <User />,
-      },
-      {
-        title: 'Bounce rate',
-        description: [
-          'See which pages keep your visitors engaged versus those they are abandoning.',
-        ],
-        icon: <Bounce />,
-      },
-      {
-        title: 'Traffic sources',
-        description: [
-          'See where your traffic is coming from to better understand where you should be spending your effort.',
-        ],
-        icon: <Traffic />,
-      },
-      {
-        title: 'Location',
-        description: [
-          'Find out where your visitors are coming from including the city, region and country.',
-        ],
-        icon: <Location />,
-      },
-      {
-        title: 'Devices',
-        description: [
-          'See the most popular devices used by visitors to help you optimize your pages.',
+          'Receive and respond to tickets from email, chat, web forms, and more. / Recevez et répondez aux tickets depuis l’email, le chat, les formulaires web, etc.',
         ],
         icon: <Device />,
       },
       {
-        title: 'Languages',
+        title: 'Automated Ticket Routing / Routage automatique',
         description: [
-          'Know which languages are the most popular among your visitors to help you tailor your content.',
+          'Automatically assign tickets to the right agent or team based on rules and priorities. / Attribuez automatiquement les tickets au bon agent ou à la bonne équipe selon des règles et priorités.',
         ],
-        icon: <Language />,
+        icon: <Gear />,
       },
       {
-        title: 'Compare',
-        description: ['See your metric performance compared against previous date ranges.'],
-        icon: <Compare />,
-      },
-      {
-        title: 'Filtering',
+        title: 'SLA Tracking / Suivi des SLA',
         description: [
-          'Gain further insight into your data by applying filters like country, browser, and URL.',
+          'Monitor response and resolution times to meet your service level agreements. / Surveillez les temps de réponse et de résolution pour respecter vos SLA.',
         ],
-        icon: <Filter />,
+        icon: <Gauge />,
       },
       {
-        title: 'Realtime data',
+        title: 'Custom Fields / Champs personnalisés',
         description: [
-          `Data available in seconds, not days. The data that Umami collects is immediately available on your dashboard`,
+          'Capture all the information you need with customizable ticket fields. / Collectez toutes les informations nécessaires grâce à des champs personnalisables.',
         ],
-        icon: <Realtime />,
+        icon: <Data />,
       },
       {
-        title: 'Teams',
+        title: 'Internal Notes / Notes internes',
         description: [
-          'The teams feature allows you to securely share websites access with different team members.',
+          'Collaborate privately on tickets with internal comments. / Collaborez en privé sur les tickets avec des commentaires internes.',
         ],
         icon: <Team />,
       },
       {
-        title: 'Custom events',
+        title: 'Bulk Actions / Actions groupées',
         description: [
-          'Track everything that happens on your website like signups and cart checkouts using custom events.',
+          'Update, assign, or resolve multiple tickets at once. / Mettez à jour, attribuez ou résolvez plusieurs tickets en une seule action.',
         ],
         icon: <Bolt />,
-      },
-      {
-        title: 'Custom data',
-        description: ['Use custom data properties to help you further analyze your data.'],
-        icon: <Data />,
-      },
-      {
-        title: 'UTM tracking',
-        description: [
-          'Measure the effectiveness of your campaign by analyzing UTM query parameters that are automatically collected.',
-        ],
-        icon: <Tag />,
-      },
-
-      {
-        title: 'Sharing',
-        description: [
-          'Easily share your stats with others through a secure, uniquely generated URL.',
-        ],
-        icon: <Share />,
-      },
-      {
-        title: 'Reports',
-        description: [
-          'Build reports for specific websites and date ranges to cover all your data needs.',
-        ],
-        icon: <Graph />,
       },
     ],
   },
   {
-    title: 'Reports',
+    title: 'Self-Service & Knowledge Base / Base de connaissances',
     description:
-      'Umami comes with out of the box reporting that enables you to gain deep insights from all your website data.',
+      'Empower users to find answers fast with a searchable, multilingual knowledge base. / Permettez aux utilisateurs de trouver rapidement des réponses grâce à une base de connaissances multilingue et consultable.',
     items: [
       {
-        title: 'Insights',
-        description: ['Dive deeper into your data by using segments and filters.'],
+        title: 'Knowledge Articles / Articles de la base',
+        description: [
+          'Create and organize help articles for common questions. / Créez et organisez des articles d’aide pour les questions fréquentes.',
+        ],
         icon: <Lightbulb />,
       },
       {
-        title: 'Funnels',
-        description: ['Understand the conversion and drop-off rate of users.'],
-        icon: <Funnel />,
+        title: 'Multilingual Support / Support multilingue',
+        description: [
+          'Serve content in English, French, and more. / Proposez du contenu en anglais, français, etc.',
+        ],
+        icon: <Language />,
       },
       {
-        title: 'Retention',
-        description: ['Measure your website stickiness by tracking how often users return.'],
-        icon: <Magnet />,
+        title: 'Search & Suggestions / Recherche et suggestions',
+        description: [
+          'Smart search and article suggestions for faster resolution. / Recherche intelligente et suggestions d’articles pour une résolution plus rapide.',
+        ],
+        icon: <Filter />,
       },
       {
-        title: 'UTM',
-        description: ['Track your campaigns through UTM parameters.'],
-        icon: <Tag />,
+        title: 'Customer Portal / Portail client',
+        description: [
+          'Let users track their tickets and browse help resources. / Permettez aux utilisateurs de suivre leurs tickets et de consulter les ressources d’aide.',
+        ],
+        icon: <User />,
+      },
+    ],
+  },
+  {
+    title: 'Collaboration & Automation / Collaboration et automatisation',
+    description: `Boost productivity with team collaboration tools and powerful workflow automation. / Améliorez la productivité grâce à des outils collaboratifs et à une automatisation avancée des processus.`,
+    items: [
+      {
+        title: 'Team Collaboration / Collaboration d’équipe',
+        description: [
+          'Assign, escalate, and comment on tickets together. / Assignez, escaladez et commentez les tickets en équipe.',
+        ],
+        icon: <Team />,
       },
       {
-        title: 'Goals',
-        description: ['Track your goals for pageviews and events.'],
-        icon: <Target />,
+        title: 'Automated Workflows / Flux de travail automatisés',
+        description: [
+          'Automate repetitive tasks and notifications. / Automatisez les tâches répétitives et les notifications.',
+        ],
+        icon: <Bolt />,
       },
       {
-        title: 'Journey',
-        description: ['Look into your revenue data and how users are spending.'],
-        icon: <Path />,
+        title: 'Canned Responses / Réponses préenregistrées',
+        description: [
+          'Reply faster with reusable templates. / Répondez plus vite grâce à des modèles réutilisables.',
+        ],
+        icon: <Share />,
       },
       {
-        title: 'Revenue',
-        description: ['Understand how users navigate through your website.'],
-        icon: <Money />,
-      },
-      {
-        title: 'Attribution',
-        description: ['See how users engage with your marketing and what drives conversions.'],
+        title: 'Integrations / Intégrations',
+        description: [
+          'Connect with email, chat, and third-party tools. / Connectez-vous à l’email, au chat et à des outils tiers.',
+        ],
         icon: <Network />,
       },
     ],
   },
   {
-    title: 'Privacy',
-    description: `Umami is private by default and helps you stay compliant with data privacy laws.`,
+    title: 'Analytics & Reporting / Analytique et rapports',
+    description: `Gain actionable insights into your support operations with real-time analytics and custom reports. / Obtenez des informations exploitables sur votre support grâce à l’analytique en temps réel et aux rapports personnalisés.`,
     items: [
       {
-        title: 'GDPR & CCPA',
+        title: 'Dashboard / Tableau de bord',
         description: [
-          'Umami never collects any personal information from your visitors so it is fully compliant with GDPR and CCPA.',
-        ],
-        icon: <Privacy />,
-      },
-      {
-        title: 'Data anonymization ',
-        description: [`All visitor data is anonymized to protect your visitors' privacy.`],
-        icon: <Anonymous />,
-      },
-      {
-        title: 'No cookies ',
-        description: [`Umami does not use any cookies so no annoying cookie banner is required.`],
-        icon: <Cookie />,
-      },
-      {
-        title: 'Data ownership ',
-        description: [
-          `Data is always in your control with Umami. You can self-host on your own infrastructure or export your data from Umami Cloud.`,
-        ],
-        icon: <Key />,
-      },
-    ],
-  },
-  {
-    title: 'Cloud',
-    description: `Umami Cloud is a reliable, high-performance hosted solution.`,
-    items: [
-      {
-        title: 'Fully managed',
-        description: [
-          `Leave the upgrades, backups and performance tuning to us while you focus on your results.`,
-        ],
-        icon: <Gear />,
-      },
-      {
-        title: 'High performance',
-        description: [
-          `Whether you have millions or billions of records, our platform is designed for speed and will deliver fast results.`,
+          'Monitor key metrics at a glance. / Surveillez les indicateurs clés en un coup d’œil.',
         ],
         icon: <Gauge />,
       },
       {
-        title: 'Data import',
+        title: 'Custom Reports / Rapports personnalisés',
         description: [
-          `Want to migrate your existing data to Umami? Just use our built-in import tool.`,
+          'Build and export reports for any data you need. / Créez et exportez des rapports sur toutes vos données.',
         ],
-        icon: <Import />,
-      },
-      {
-        title: 'Data export ',
-        description: [`Don't settle for summarized data. Get a full data export of all your data.`],
         icon: <Export />,
       },
       {
-        title: 'Email reports ',
+        title: 'Satisfaction Surveys / Enquêtes de satisfaction',
         description: [
-          `Send scheduled email reports to anyone. Send out website summaries in a compact and digestable email.`,
+          'Collect feedback after ticket resolution. / Collectez les retours après la résolution des tickets.',
         ],
-        icon: <Reports />,
+        icon: <Graph />,
+      },
+      {
+        title: 'SLAs & Performance / SLA et performance',
+        description: [
+          'Track compliance and agent performance. / Suivez la conformité et la performance des agents.',
+        ],
+        icon: <Gauge />,
+      },
+    ],
+  },
+  {
+    title: 'Security & Privacy / Sécurité et confidentialité',
+    description: `Protect your data and ensure compliance with robust security and privacy controls. / Protégez vos données et assurez la conformité grâce à des contrôles de sécurité et de confidentialité renforcés.`,
+    items: [
+      {
+        title: 'GDPR & CCPA Compliance / Conformité RGPD & CCPA',
+        description: [
+          'All data is handled securely and in compliance with global standards. / Toutes les données sont traitées de manière sécurisée et conforme aux normes internationales.',
+        ],
+        icon: <Privacy />,
+      },
+      {
+        title: 'Data Encryption / Chiffrement des données',
+        description: [
+          'Your data is encrypted in transit and at rest. / Vos données sont chiffrées en transit et au repos.',
+        ],
+        icon: <Key />,
+      },
+      {
+        title: 'Role-based Access / Accès basé sur les rôles',
+        description: ['Control who can see and do what. / Contrôlez qui peut voir et faire quoi.'],
+        icon: <Tag />,
+      },
+      {
+        title: 'Data Ownership / Propriété des données',
+        description: [
+          'You own your data, always. / Vous êtes toujours propriétaire de vos données.',
+        ],
+        icon: <Key />,
       },
     ],
   },
@@ -275,8 +212,8 @@ export default function FeaturesPage() {
   return (
     <>
       <PageHeader
-        title="Features"
-        description="An overview of all the core features Umami provides."
+        title="Features / Fonctionnalités"
+        description="Discover the key features of our modern Helpdesk & Service Desk platform. / Découvrez les fonctionnalités clés de notre plateforme Helpdesk & Service Desk."
       />
       <Column gap="6">
         {items.map(({ title, description, items }) => {

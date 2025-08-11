@@ -67,7 +67,7 @@ const NavLinks = () => {
 };
 
 const ActionLinks = () => {
-  const query = useQueryString({ ref: 'umami-nav-header' });
+  const query = useQueryString({ ref: 'digizus-nav-header' });
 
   return (
     <Row className={styles.actions} alignItems="center" gap="2">
@@ -82,13 +82,13 @@ const ActionLinks = () => {
         </Link>
       </Button>
       <Button className={styles.login} variant="quiet" asChild>
-        <Link href={`https://cloud.umami.is/login${query}`} data-umami-event="login-button-header">
+        <Link href={`https://cloud.digizus.com/login${query}`} data-digizus-event="login-button-header">
           Log in
         </Link>
       </Button>
       <Button className={styles.signup} variant="primary" asChild>
         <Link
-          href={`https://cloud.umami.is/signup${query}`}
+          href={`https://cloud.digizus.com/signup${query}`}
           data-umami-event="signup-button-header"
         >
           Sign up

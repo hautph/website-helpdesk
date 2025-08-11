@@ -5,25 +5,28 @@ import styles from './Statements.module.css';
 
 const statements = [
   {
-    title: 'Easy to use',
+    title: 'Multi-channel Support',
     description: `
-Powerful yet simple, Umami is easy to use and understand and doesn't require complicated setup or tag configurations.
+Manage tickets from email, chat, and web—all in one place. Digizus Helpdesk keeps your support organized and efficient, so no request is ever missed.
+<span style="font-style:italic;color:#888">Gérez les tickets provenant de l'e-mail, du chat et du web—tout au même endroit. Digizus Helpdesk centralise votre support pour ne manquer aucune demande.</span>
     `,
-    image: <Analytics />,
+    image: <Analytics />, 
   },
   {
-    title: 'UTMs and Custom Events',
+    title: 'Collaboration & Automation',
     description: `
-Umami automatically understands links with UTM parameters and lets you view and filter your website data based on UTMs. Additionally, you can track any event on your website, such as button clicks, form submissions, purchases, newsletter signups, etc.
+Assign, escalate, and resolve tickets as a team. Automate repetitive tasks and focus on what matters most: helping your users.<br />
+<span style="font-style:italic;color:#888">Assignez, escaladez et résolvez les tickets en équipe. Automatisez les tâches répétitives et concentrez-vous sur l'essentiel : aider vos utilisateurs.</span>
     `,
-    image: <Code />,
+    image: <Code />, 
   },
   {
-    title: 'No Cookie Banners',
+    title: 'Customer Satisfaction',
     description: `
-All data is anonymized with Umami, and no personal information is ever collected on your website's users. You can track your website's performance without needing opt-in cookie banners, providing your users with a better and more trusted experience. Umami is GDPR and CCPA compliant by default.
+Track response times, collect feedback, and improve your service quality with built-in reports and satisfaction surveys.<br />
+<span style="font-style:italic;color:#888">Suivez les temps de réponse, recueillez les avis et améliorez la qualité de votre service grâce aux rapports intégrés et aux enquêtes de satisfaction.</span>
     `,
-    image: <Block />,
+    image: <Block />, 
   },
 ];
 
@@ -32,7 +35,7 @@ export default function Statements() {
     <section className={styles.container}>
       <div className={styles.header}>
         <TextBlock align="center" className={styles.block}>
-          <h1>Umami makes analyzing your data effortless</h1>
+          <h1>Digizus makes analyzing your data effortless</h1>
         </TextBlock>
       </div>
       <div className={styles.items}>
